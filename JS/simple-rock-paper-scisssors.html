@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock-Paper-Scissors</title>
+</head>
+<body>
+    <h2>Rock Paper Scissors</h2>
+    <button onclick="
+        computerMove = Math.floor(Math.random() * 3);
+        if(computerMove === 0)
+        alert('You picked rock. Computer picked rock. Tie.');
+        else if(computerMove === 1)
+        alert('You picked rock. Computer picked Paper. You loose.');
+        else
+        alert('You picked rock. Computer picked Scissors. You Win.');
+    ">Rock</button>
+    <button onclick="
+        computerMove = Math.floor(Math.random() * 3);
+        if(computerMove === 0)
+        alert('You picked paper. Computer picked rock. You Win.');
+        else if(computerMove === 1)
+        alert('You picked paper. Computer picked Paper. Tie.');
+        else
+        alert('You picked paper. Computer picked Scissors. You Loose.');
+    ">Paper</button>
+    <button onclick="
+        computerMove = Math.floor(Math.random() * 3);
+        if(computerMove === 0)
+        alert('You picked Scissors. Computer picked rock. You Loose.');
+        else if(computerMove === 1)
+        alert('You picked Scissors. Computer picked Paper. You Win.');
+        else
+        alert('You picked Scissors. Computer picked Scissors. Tie.');
+    ">Scissors</button>
+    <script>
+        let computerMove;
+        console.log(undefined || 'jkxgcbjdx');
+    </script>
+</body>
+</html>
