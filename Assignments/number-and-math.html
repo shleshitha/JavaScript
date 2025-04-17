@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number and Math</title>
+</head>
+<body>
+  <script>
+    function formatCurrency(amount, currencyCode) {
+      if (currencyCode === 'INR') {
+        return `₹${help(amount,2,',','.')}`;
+      }
+      else if(currencyCode === 'USD'){
+        return `$${help(amount,3,',','.')}`;
+      }
+      else if(currencyCode === 'EUR'){
+        return `${help(amount,3,'.',',')}€`;
+      }
+    }
+    function help(amount,cnt,thousandSeparator,decimalSeparator){
+        let [intPart, decPart] = String(amount.toFixed(2)).split('.');
+        let ans = '';
+        let temp = intPart.split('').reverse().join('');
+        ans += temp.substring(0, 3);
+        let i = 3;
+        while (i + cnt-1 < temp.length) {
+          ans += thousandSeparator + temp.substring(i, i + cnt);
+          i += cnt;
+        }
+        if(i<temp.length)
+        ans+=thousandSeparator + temp.substring(i, temp.length);
+        ans = ans.split('').reverse().join('');
+        return `${ans}${decimalSeparator}${decPart}`;
+    }
+    console.log(formatCurrency(1234567, 'INR'));     // ₹12,34,567.00
+    console.log(formatCurrency(1234.56, 'INR'));     // ₹1,234.56
+    console.log(formatCurrency(12.5, 'INR'));        // ₹12.50
+
+    console.log(formatCurrency(1234567, 'USD'));     // $1,234,567.00
+    console.log(formatCurrency(1234.56, 'USD'));     // $1,234.56
+    console.log(formatCurrency(12.5, 'USD'));        // $12.50
+
+    
+    console.log(formatCurrency(1234567, 'EUR'));     // 1.234.567,00€
+    console.log(formatCurrency(1234.56, 'EUR'));     // 1.234,56€
+    console.log(formatCurrency(12.5, 'EUR'));        // 12,50€
+
+  </script>
+</body>
+</html>

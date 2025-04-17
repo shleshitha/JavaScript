@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Scope</title>
+</head>
+<body>
+    <script>
+        let user = 'shleshitha';
+        function printUser(){
+            console.log(user);          //user is also accessible here
+        }
+        printUser();
+        console.log(user);              //user is also accessible here
+    </script>
+</body>
+</html>

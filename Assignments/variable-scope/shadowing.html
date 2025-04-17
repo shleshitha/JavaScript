@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable Shadowing</title>
+</head>
+<body>
+    <script>
+        let user = 'shleshitha Cheekati';
+        function printUser(){
+            let user = 'proxy';
+            console.log(user);          //This displays proxy
+        }
+        printUser();
+        console.log(user);              //This is displays the text 'shleshitha cheekati'
+    </script>
+</body>
+</html>
