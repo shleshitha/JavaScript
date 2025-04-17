@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    <script>
+        function createCalculator(){
+            return {
+                add : function add(a,b){
+                    return a+b;
+                },
+                subtract : function subtract(a,b){
+                    return a-b;
+                },
+                multiply : function multiply(a,b){
+                    return a*b;
+                },
+                division : function division(a,b){
+                    if(!b)
+                    return 'division by zero is not possible';
+                    return a/b;
+                }
+            };
+        }
+
+        const myCalc = createCalculator();
+        console.log(myCalc.add(5,4));
+        console.log(myCalc.subtract(5,4));
+        console.log(myCalc.multiply(5,4));
+        console.log(myCalc.division(5,4));
+    </script>
+</body>
+</html>
