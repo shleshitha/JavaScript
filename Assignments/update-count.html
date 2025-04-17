@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Count</title>
+    <style>
+        body{
+            font-family: arial;
+        }
+        .display{
+            text-align: center;
+            vertical-align: middle;
+            margin-top: 250px;
+        }
+        .count{
+            font-size: 30px;
+            font-weight: bold;
+        }
+        button{
+            padding: 10px 15px;
+            border-radius: 5px;
+            background-color: rgb(165, 233, 233);
+            border: none;
+            cursor: pointer;
+            color: rgb(2, 12, 9);
+        }
+        button:hover{
+            background-color: rgb(58, 80, 80);
+            color: white;
+        }
+        .warning{
+            color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <div class="display">
+        <p class="count">Count : 0</p>
+        <p class="warning"></p>
+        <button class="inc-button">Increment</button>
+        <button class="de-button">Decrement</button>
+    </div>
+    <script>
+        let count = 0;
+        const countDisplay = document.querySelector('.count');
+        const warning = document.querySelector('.warning');
+        document.querySelector('.inc-button').addEventListener('click',()=>{
+            count++;
+            countDisplay.innerText=`Count : ${count}`;
+            warning.innerText='';
+        })
+        document.querySelector('.de-button').addEventListener('click',()=>{
+            if(count>0){
+                count--;
+                countDisplay.innerText=`Count : ${count}`;
+            }
+            else
+            warning.innerText=`\nCount cannot be less than 0`;
+        })
+    </script>
+</body>
+</html>
