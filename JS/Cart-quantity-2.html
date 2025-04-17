@@ -11,22 +11,52 @@
         console.log(`Cart quantity: ${quantity}`);
     ">Show Quantity</button>
     <button onclick="
-        updateCartQuantity(1);
+        if(quantity+1>10)
+        alert('The cart is full!');
+        else{
+            quantity++;
+            console.log(`Cart quantity: ${quantity}`);
+        }
     ">Add to Cart</button>
     <button onclick="
-        updateCartQuantity(2);
+        if(quantity+2>10)
+        alert('The cart is full!');
+        else{
+            quantity+=2;
+            console.log(`Cart quantity: ${quantity}`);
+        }
     ">+2</button>
     <button onclick="
-        updateCartQuantity(3);
+        if(quantity+3>10)
+        alert('The cart is full!');
+        else{
+            quantity+=3;
+            console.log(`Cart quantity: ${quantity}`);
+        }
     ">+3</button>
     <button onclick="
-        updateCartQuantity(-1);
+        if(quantity-1 < 0)
+        alert('The cart is empty!');
+        else{
+            quantity--;
+            console.log(`Cart quantity: ${quantity}`);
+        }
     ">Remove from Cart</button>
     <button onclick="
-        updateCartQuantity(-2);
+        if(quantity-2 < 0)
+        alert('The cart is empty!');
+        else{
+            quantity-=2;
+            console.log(`Cart quantity: ${quantity}`);
+        }
     ">-2</button>
     <button onclick="
-        updateCartQuantity(-3);
+        if(quantity-3 < 0)
+            alert('The cart is empty!');
+        else{
+            quantity-=3;
+            console.log(`Cart quantity: ${quantity}`);
+        }
     ">-3</button>
     <button onclick="
         quantity=0;
@@ -35,16 +65,6 @@
     ">Reset Cart</button>
     <script>
         let quantity=0;
-        function updateCartQuantity (val){
-            if(quantity+val>10)
-            alert('The cart is full!');
-            else if(quantity+val<0)
-            alert('The cart is empty!');
-            else{
-                quantity+=val;
-                console.log(`Cart quantity: ${quantity}`);
-            }
-        }
     </script>
 </body>
 </html>
