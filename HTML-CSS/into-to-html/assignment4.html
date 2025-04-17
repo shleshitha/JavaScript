@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 4</title>
+    <style>
+        /* body{
+            background-color: black;
+            color: white;
+        } */
+        button{
+           padding: 10px 20px;
+           font-size: 18px;
+        }
+        #a{
+            background-color: black;
+            color: aliceblue;
+            /* border: 10px solid white;
+            width: 150px;
+            height: 50px; */
+            cursor: pointer;
+            border: none;
+            transition: opacity 0.15s;
+           
+        }
+        #a:hover{
+            opacity: 0.8;
+        }
+        #b{
+            color: black;
+            background-color: rgb(255,216,20);
+            font-weight: bold;
+            /* border: 10px solid white; */
+            /* width: 250px;
+            height: 50px; */
+            border-radius: 20px;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.15s;
+        }
+        #b:hover{
+            background-color: rgb(255, 196, 0);
+        }
+        #c{
+            color: white;
+            font-weight: bold;
+            background-color: rgb(46,164,79);
+            /* border: 10px solid white; */
+            /* width: 100px;
+            height: 50px; */
+            border-radius: 10px;
+            cursor: pointer;
+            border: none;
+            transition:  box-shadow 0.15s;
+        }
+        #c:hover{
+            box-shadow: 2px 2px 1px rgba(0,0,0,0.2);
+        }
+        #d1{
+            color: white;
+            font-weight: bold;
+            background-color: rgb(121,82,179);
+            /* border: 10px solid white; */
+            /* width: 150px;
+            height: 50px; */
+            border-radius: 5px;
+            cursor: pointer;
+            border: none;
+            margin-right: 10px;
+            transition: opacity 0.15s;
+        }
+        #d1:hover{
+            opacity: 0.8;
+        }
+        #d2{
+            color: rgb(108,117,125);
+            font-weight: bold;
+            /* background-color: rgb(121,82,179); */
+            border: 1px solid rgb(108,117,125);
+            /* width: 150px;
+            height: 50px; */
+            border-radius: 5px;
+            cursor: pointer;
+            /* border: none; */
+            transition: color 0.15s, background-color 0.15s;
+        }
+        #d2:hover{
+            color: white;
+            background-color: rgb(108,117,125);
+        }
+        #e1{
+            color: white;
+            font-size: medium;
+            font-weight: bold;
+            background-color: rgb(10,102,194);
+            /* border: 10px solid white; */
+            /* width: 250px;
+            height: 50px; */
+            border-radius: 25px;
+            cursor: pointer;
+            border: none;
+            margin-right: 10px;
+            transition: background-color 0.15s;
+        }
+        #e1:hover{
+            background-color: rgb(1, 48, 95);
+        }
+        #e2{
+            color: rgb(10,102,194);
+            font-weight: bold;
+            border: 1px solid rgb(10,102,194);
+            /* width: 100px;
+            height: 50px; */
+            border-radius: 25px;
+            cursor: pointer;
+           transition: border 0.15s, background-color 0.15s;
+        }
+        #e2:hover{
+            border: 3px solid rgb(10,102,194);
+            background-color: rgb(193, 215, 238);
+        }
+        .h{
+            font-weight: bold;
+            padding: 8px 10px;
+            border: 2px solid rgb(115, 104, 104);
+            border-radius: 5px;
+            margin-right: 4px;
+        }
+        a{
+            margin-right: 4px;
+        }
+        #i, #j, .k{
+            background-color: green;
+            color: white;
+            border: none;
+        }
+        #i{
+            transition: padding 1s;
+        }
+        #i:hover{
+            padding: 40px 80px;
+        }
+        #j{
+            transition: box-shadow 1s;
+        }
+        #j:hover{
+            box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+        }
+        .k{
+            /* margin: 0px 15px;
+            padding: 10px 20px;
+            transition: margin 1s, padding 1s; */
+            padding-top: 8px;
+            padding-bottom: 8px;
+            cursor: pointer;
+
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-left: 10px;
+            margin-right: 10px;
+
+            transition: padding 0.15s,
+            margin 0.15s;
+        }
+        .k:hover{
+            /* margin: 0px;
+            padding: 10px 30px; */
+            padding-left: 25px;
+            padding-right: 25px;
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+    </style>
+</head>
+<body>
+    <h2>2a. Uber</h2>
+    <button id="a">Request now</button>
+    <h2>2b. Amazon</h2>
+    <button id="b">Add to Cart</button>
+    <h2>2c. GitHub</h2>
+    <button id="c">Sign up</button>
+    <h2>2d. Bootstrap</h2>
+    <button id="d1">Get started</button>
+    <button id="d2">Download</button>
+    <h2>2e. LinkedIn</h2>
+    <button id="e1">Apply on company website</button>
+    <button id="e2">Save</button>
+    <h2>4h. Pagination</h2>
+    <button class="h">Back</button>
+    <a href="#">1</a>
+    <a href="#">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+    <a href="#">5</a>
+    <button class="h">Next</button>
+
+    <h2>4i. Stretch</h2>
+    <button id="i">Stretch</button>
+
+    <h2>4j. 3D Click</h2>
+    <button id="j">Shadow</button>
+
+    <h2>4k. Margin and padding</h2>
+    <button class="k">One</button>
+    <button class="k">Two</button>
+    <button class="k">Three</button>
+</body>
+</html>

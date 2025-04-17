@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=d, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .bottom-right{
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: black;
+            color: white;
+        }
+        .sidebar{
+            position: fixed;
+            top: 0px;
+            bottom: 0px;
+            right: 0px;
+            width: 100px;
+            background-color: green;
+            color: white;
+        }
+        .black{
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: black;
+        } */
+
+        /* .sidebar{
+            position: fixed;
+            top: 0px;
+            bottom: 0px;
+            right: 0px;
+            width: 100px;
+            background-color: green;
+            color: white;
+        }
+        .overlay{
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0,0,0,0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .grid{
+            background-color: white;
+            width: 300px;
+            padding: 15px ;
+            border-radius: 5px;
+        }
+        p{
+            margin: 0;
+            font-family: arial;
+        }
+        .title{
+            font-weight: bold;
+            /* padding-top: 5px; */
+            /* margin-bottom: 12px;
+            font-size: 24px;
+        }
+        .desc{
+            margin-bottom: 12px;
+        } */ 
+        /* .header{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 60px;
+            
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            font-family: arial;
+        }
+        .box1{
+            display: flex;
+            align-items: center;
+            column-gap: 5px;
+        }
+        img{
+            height: 40px;
+            width: 40px;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+        .name{
+            font-weight: bold;
+            
+        }
+        .b1{
+            background-color: rgb(24, 119, 242);
+            border: none;
+            color: white;
+            font-weight: bold;
+            padding: 8px 12px;
+            border-radius: 6px;
+            margin-right: 3px;
+        }
+        .b2{
+            background-color: (230, 230, 230);
+            border: none;
+            
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-weight: bold;
+        } */
+        .left-sidebar{
+            display: flex;
+            flex-direction: column;
+            width: 70px;
+            background-color: rgb(33, 33, 33);
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            row-gap: 10px;
+            align-items: center;
+            padding-top: 10px;
+        }
+        img{
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 25px;
+        }
+        .second-sidebar{
+            width: 200px;
+            background-color: rgb(55, 55, 55);
+            position: fixed;
+            top: 0;
+            left: 70px;
+            bottom: 0;
+            padding: 15px 15px;
+        }
+        .top{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .info{
+            color: white;
+            font-family: arial;
+            
+            font-size: 14px;
+            
+        }
+        .add{
+            color: rgb(150, 150, 150);
+            font-size: 25px;
+            font-weight: bold;
+        }
+        p{
+            margin: 0;
+        }
+        a{
+            text-decoration: none;
+            color: rgb(150, 150, 150);
+            font-family: arial;
+            display: block;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="bottom-right">bottom-right</div>
+    <div class="sidebar">
+        right sidebar
+    </div> -->
+    <!-- <div class="black"></div> -->
+    
+    <!-- <div class="sidebar">
+        right sidebar
+    </div>
+    <div class="overlay">
+        <div class="grid">
+            <p class="title">Modal Title</p>
+            <p class="desc">This is a modal</p>
+            <button>Close</button>
+        </div>
+    </div> -->
+    <!-- <div class="header">
+        <div class="box1">
+            <img src="img1.jpeg" alt="">
+            <p class="name">Oliver Cat</p>
+        </div>
+        <div class="box2">
+            <button class="b1">Add Friend</button>
+            <button class="b2">Message</button>
+        </div>
+    </div> -->
+
+    <div class="left-sidebar">
+        <img src="img1.jpeg" alt="">
+        <img src="img2.jpeg" alt="">
+        <img src="img3.jpeg" alt="">
+    </div>
+    <div class="second-sidebar">
+        <div class="top">
+            <p class="info">INFO</p>
+            <p class="add">+</p>
+        </div>
+        <a href="#"># new-videos</a>
+        <a href="#"># updates</a>
+        <a href="#"># faq</a>
+    </div>
+</body>
+</html>

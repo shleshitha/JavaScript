@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter</title>
+    <style>
+        .box{
+            display: flex;
+            column-gap: 10px;
+            margin-left: 20px;
+            margin-top: 20px;
+            font-family: arial;
+            width: 420px;
+        }
+        img{
+            height: 50px;
+            width: 50px;
+            object-fit: cover;
+            border-radius: 25px;
+        }
+        .content{
+            flex: 1;
+        
+        }
+        .username{
+            display: flex;
+            column-gap: 5px;
+            margin-bottom: 5px;
+        }
+        .name{
+            font-weight: bold;
+        }
+        .id{
+            color: rgb(111, 111, 111);
+        }
+        
+        .message{
+            line-height: 20px;
+            margin-bottom: 15px;
+        }
+        .link{
+            display: flex;
+            column-gap: 10px;
+            align-items: center;
+            border: 1px solid rgb(200, 200, 200);
+            border-radius: 15px;
+            height: 100px;
+            overflow: hidden;
+           
+        }
+        .empty{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(220, 220, 220);
+            margin-right: 10px
+        }
+        .info{
+            flex: 1;
+        }
+        .website{
+            color: rgb(111, 111, 111);
+            margin-bottom: 3px;
+        }
+        .title{
+            line-height: 22px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div>
+            <img src="img1.jpeg" alt="">
+        </div>
+        <div class="content">
+            <div class="username">
+                <div class="name">supersimple.dev</div>
+                <div class="id">@SuperSimpleDev</div>
+            </div>
+
+            <div class="message">
+                What is backend web development? A complete overview. New video is up!
+            </div>
+            <div class="link">
+                <div class="empty"></div>
+                <div class="info">
+                    <div class="website">youtube.com</div>
+                    <div class="title">
+                        Backend web development - a complete overview (2021)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

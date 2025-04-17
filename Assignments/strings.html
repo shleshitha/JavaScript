@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings</title>
+</head>
+<body>
+    <script>
+        function findLongestPalindrome(str){
+            let n = str.length;
+            let ans='';
+            for(let i=0;i<n;i++){
+                let temp='';
+                for(let j=i;j<n;j++){
+                    temp+=str[j];
+                    if(check(temp)&&ans.length<temp.length)
+                    ans=temp;                    
+                }
+            }
+            return ans;
+        }
+        function check(str){
+            let n=str.length;
+            for(let i=0;i<n/2;i++){
+                if(str[i]!==str[n-i-1])
+                return false;
+            }
+            return true;
+        }
+        console.log(findLongestPalindrome('madam'));
+        console.log(findLongestPalindrome('forgeeksskeegfor'));
+        console.log(findLongestPalindrome('abccbe'));
+    </script>
+</body>
+</html>

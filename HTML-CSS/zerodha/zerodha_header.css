@@ -1,0 +1,33 @@
+body{
+    margin: 0px;
+}
+.navbar{  
+    height: 70px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.08);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.pages{
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+    align-items: center;
+}
+.page:hover{
+    color: rgb(41, 99, 245);
+}
+.logo{
+    margin-right: 100px;
+    height: 17px;
+}
+a{
+    font-family: Inter;
+    color: rgb(83, 80, 80);
+    text-decoration: none;
+    font-size: 14px;
+}
+.menu{
+    height: 20px;
+}

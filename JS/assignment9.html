@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 9</title>
+</head>
+<body>
+    <button>9a</button>
+    <button class="second-button">9b</button>
+    <button class="heads" onclick="
+        choosed('heads');
+    ">Heads</button>
+    <button class="tails" onclick="
+        choosed('tails');
+    ">Tails</button>
+    <p class="display"></p>
+
+    <input class='nameInput' type="text" placeholder="Enter your name" onkeydown="
+        if(event.key=='Enter')
+        displayName();
+    ">
+    <button onclick="
+        displayName();
+    ">Submit</button>
+    <p class="name"></p>
+    <script>
+        console.log(document.querySelector('button'));
+        document.querySelector('.second-button').innerHTML='9b done!';
+
+        function choosed(choice){
+            document.querySelector('.display').innerHTML=`You chose : ${choice}`;
+        }
+        function displayName(){
+            const name = document.querySelector('.nameInput').value;
+            document.querySelector('.name').innerHTML=`Your name is : ${name}`;
+        }
+    </script>
+</body>
+</html>

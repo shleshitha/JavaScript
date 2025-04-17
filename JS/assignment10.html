@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 10</title>
+    <style>
+        .amazon-button{
+            background-color: rgb(255,216,20);
+            border: none;
+            font-size: 20px;
+            padding: 10px 50px;
+            border-radius: 30px;
+        }
+        .uber-buttons{
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        .request-now-button{
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-weight: bold;
+            border-radius: 3px;
+            margin-right: 20px;
+        }
+        .schedule-button{
+            background-color: rgb(230,230,230);
+            border: none;
+            padding: 10px 15px;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+        /* .js-button{
+            margin-bottom: 50px;
+        } */
+        .gaming-button,
+        .music-button,
+        .tech-button{
+            background-color: rgb(216, 216, 216);
+            border: none;
+            padding: 10px 15px;
+            font-size: 15px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .turned-on{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <button class="amazon-button">Add to Cart</button>
+    <div class="uber-buttons">
+        <button class="request-now-button">
+            Request now
+        </button>
+        <button class="schedule-button">
+            Schedule for later
+        </button>
+    </div>
+
+    <button class="js-button">Test</button>
+    <button class="gaming-button" onclick="
+        toggle('gaming-button');
+    ">Gaming</button>
+    <button class="music-button" onclick="
+        toggle('music-button');
+    ">Music</button>
+    <button class="tech-button" onclick="
+        toggle('tech-button');
+    ">Tech</button>
+    <script>
+        const testButton = document.querySelector('.js-button');
+        console.log(testButton);
+        
+        console.log(testButton.classList.contains('js-button'));
+        function toggle(className){
+            
+            const Button = document.querySelector(`.${className}`);
+            if(Button.classList.contains('turned-on'))
+            Button.classList.remove('turned-on');
+            else{
+                turnOff();
+                Button.classList.add('turned-on');
+            }
+        }
+        function turnOff(){
+            const previousButton = document.querySelector('.turned-on');
+            if (previousButton) {
+                previousButton.classList.remove('turned-on');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App</title>
+</head>
+<body>
+    <button class="start-button js-start-button" >Start</button>
+    <button class="add-to-cart-button" >Add to Cart</button>
+    <p class="added-desc"></p>
+    <button onclick="
+        messages++;
+    ">Add</button>
+    <button onclick="
+    if(messages>0)
+        messages--;
+    ">Remove</button>
+    <script>
+        let add = ()=>{
+            console.log(2+3);
+        }
+        // add();
+        // add();
+        function runTwice(fun){
+            fun();
+            fun();
+        }
+        runTwice(() => {
+            console.log('run twice');
+        });
+
+        function updateButton(){
+            document.querySelector('.start-button').innerText='Loading...';
+            setTimeout(() => {
+                document.querySelector('.start-button').innerText='Finished!';
+            }, 1000);
+        }
+        let timeOut=false;
+        function addToCart(){
+            const messageElement = document.querySelector('.added-desc');
+            messageElement.innerHTML='Added';
+            if(timeOut){
+                clearTimeout(timeOut);
+            }
+            timeOut = setTimeout(() => {
+                messageElement.innerHTML='';
+            }, 2000);
+        }
+        let messages = 2;
+        setInterval(() => {
+            if(document.title==='App'&& messages>0)
+            document.title=`(${messages}) New messages`;
+            else
+            document.title = 'App';
+        }, 1000);
+
+        document.querySelector('.js-start-button').addEventListener('click',()=>{
+            updateButton();
+        })
+
+        document.querySelector('.add-to-cart-button').addEventListener('click',()=>{
+            addToCart();
+        })
+    </script>
+</body>
+</html>
