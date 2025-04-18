@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays and Loops 2</title>
+</head>
+<body>
+    <script>
+        const products = [
+            { name: 'Laptop', category: 'Electronics', price: 1200 },
+            { name: 'T-Shirt', category: 'Apparel', price: 25 },
+            { name: 'Mouse', category: 'Electronics', price: 30 },
+            { name: 'Jeans', category: 'Apparel', price: 70 },
+        ];
+        function groupByCategory(products,categoryKey){
+            const result = {};
+            products.forEach(product => {
+                const category = product[categoryKey];
+                if(!result[category])
+                result[category]=[];
+                result[category].push(product);
+            });
+            return result;
+        }
+        const grouped = groupByCategory(products, 'category');
+        console.log(grouped);
+    </script>
+</body>
+</html>
