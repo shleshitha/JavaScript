@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays and Loops</title>
+</head>
+<body>
+    <script>
+        const createTransaction = (type,amount)=>({
+            type : type,
+            amount : amount
+        });
+        const transactions = [];
+        transactions.push(createTransaction('deposit',1000));
+        transactions.push(createTransaction('withdrawal',200));
+        transactions.push(createTransaction('deposit',500));
+        transactions.push(createTransaction('withdrawal',100));
+        // console.log(transactions);
+        function processTransactions(transactions){
+            let balance = 0;
+            let totalDeposits = 0;
+            let totalWithdrawals = 0;
+            transactions.forEach(transaction => {
+                if(transaction.type==='deposit'){
+                    balance+=transaction.amount;
+                    totalDeposits+=transaction.amount;
+                }
+                else{
+                    balance-=transaction.amount;
+                    totalWithdrawals+=transaction.amount;
+                }
+                
+            });
+            return {
+                finalBalance : balance,
+                totalDeposits,
+                totalWithdrawals
+            }
+        }
+        console.log(processTransactions(transactions));
+    </script>
+</body>
+</html>
