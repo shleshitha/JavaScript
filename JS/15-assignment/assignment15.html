@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assigment 15a - 15g</title>
+</head>
+<body>
+    <script type="module">
+        import dayjs from 'https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js';
+        import {isWeekend as isSatSun} from './weekend.js';
+
+        const today = dayjs();
+        const fiveDaysAfterToday = today.add(5,'days');
+        console.log(fiveDaysAfterToday.format('MMMM D'));
+
+        const oneMonthAfterToday = today.add(1,'months');
+        console.log(oneMonthAfterToday.format('MMMM D'));
+
+        const oneMonthBeforeToday = today.add(-1,'months');
+        // const oneMonthBeforeToday = today.subtract(1,'months');
+        console.log(oneMonthBeforeToday.format('MMMM D'));
+
+        console.log(today.format('dddd'));
+
+        let date = today;
+        console.log(date.format('MMMM D'));
+        console.log(isSatSun(date));
+
+        date = today.add(3,'days');
+        console.log(date.format('MMMM D'));
+        console.log(isSatSun(date));
+
+        date = today.add(5,'days');
+        console.log(date.format('MMMM D'));
+        console.log(isSatSun(date));
+    </script>
+</body>
+</html>
