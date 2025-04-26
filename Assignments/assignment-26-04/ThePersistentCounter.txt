@@ -1,0 +1,30 @@
+function createCounter() {
+let count = 0;
+function incrementCounter() {
+count++;
+return count;
+}
+return incrementCounter;
+}
+const counterA = createCounter();
+console.log(counterA()); // Expected: 1, Actual: ?
+console.log(counterA()); // Expected: 2, Actual: ?
+
+const counterB = createCounter();
+console.log(counterB()); // Expected: 1 (independent counter), Actual: ?
+
+
+The output is 
+1
+2
+1
+
+This is because both counterA and counterB are going to maintain individual count variables.
+
+When a createCounter function call is made, a individual count variable is created for every function call.
+
+If we try to access the count variable outside the createCounter function it throws an error
+
+But if i update it using count = 10 and print it doesnt give any error.
+Reason: when you assign a value to a variable without any let,const or var, then the variable is created as global. So we can access it.
+This is independent from the count variable in createCounter function.
